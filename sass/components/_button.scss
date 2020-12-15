@@ -1,0 +1,15 @@
+.btn {
+    background: linear-gradient($color-secondary, $color-primary);
+    color: $white-color;
+    padding: 16px 22px;
+    border-radius: 25px;
+    box-shadow: 0 6px 5px  #C6C6C6;
+    width: 100%;
+    max-width: 220px;
+    min-width: 200px;
+    max-height: 50px;
+    @media screen and (max-width: 290px) {
+        font-size: 14px;
+        
+    }
+}

@@ -1,0 +1,145 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+div, p {
+  font-size: 1.6rem;
+}
+
+.btn {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #FFF;
+  padding: 16px 22px;
+  border-radius: 25px;
+  box-shadow: 0 6px 5px #C6C6C6;
+  width: 100%;
+  max-width: 220px;
+  min-width: 200px;
+  max-height: 50px;
+}
+@media screen and (max-width: 290px) {
+  .btn {
+    font-size: 14px;
+  }
+}
+
+header {
+  box-shadow: 0 0 5px #CFCFCF;
+  position: relative;
+}
+header .logo {
+  padding: 22px 0 12px 0;
+  margin: auto;
+  display: block;
+}
+
+.location-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  background-color: #EAEAEA;
+}
+.location-bar p {
+  padding: 0 0 0 18px;
+}
+
+.home-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F6F6F6F6;
+  min-height: 287px;
+  text-align: center;
+  padding: 43px 35px 57px 35px;
+}
+@media screen and (min-width: 582px) {
+  .home-intro {
+    justify-content: space-evenly;
+    height: 400px;
+  }
+}
+.home-intro h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.home-intro p {
+  font-size: 18px;
+  font-weight: 100;
+  margin-bottom: 32px;
+}
+
+.process {
+  padding: 50px 20px 68px 20px;
+}
+.process h2 {
+  padding-bottom: 32px;
+}
+@media screen and (min-width: 400px) {
+  .process {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.process-step {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: -12px;
+}
+.process-step .step-number {
+  background-color: #9356DC;
+  color: #FFF;
+  font-size: 14px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 12px;
+  top: -10px;
+}
+.process-step i {
+  margin: 0 26px 0 34px;
+  font-size: 20px;
+  color: #7E7E7E;
+}
+.process-step p {
+  font-weight: 500;
+}
+.process-step .step-info {
+  display: flex;
+  align-items: center;
+  width: 322px;
+  height: 74px;
+  background-color: #F6F6F6F6;
+  border-radius: 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 10px 10px #ebebeb;
+}
+.process-step .step-info__3 {
+  background-color: #F5EDFF;
+}
+.process-step .step-info__3 i {
+  color: #9356DC;
+}
+
+/*# sourceMappingURL=style.css.map */
