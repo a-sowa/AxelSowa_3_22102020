@@ -47,6 +47,27 @@ header .logo {
   display: block;
 }
 
+footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0 36px 25px;
+}
+footer h3 {
+  font-family: "Shrikhand", sans-serif;
+  color: #FFF;
+  font-weight: 200;
+  margin-bottom: 26px;
+}
+footer a {
+  text-decoration: none;
+  color: #FFF;
+}
+footer a i {
+  margin-right: 12px;
+  font-size: 1.4rem;
+}
+
 .location-bar {
   display: flex;
   justify-content: center;
@@ -140,6 +161,64 @@ header .logo {
 }
 .process-step .step-info__3 i {
   color: #9356DC;
+}
+
+.restau-list {
+  padding: 50px 20px 68px 20px;
+  background-color: #F6F6F6F6;
+}
+.restau-list h2 {
+  padding-bottom: 32px;
+}
+.restau-list .restau-prev {
+  width: 335px;
+  height: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 23px;
+}
+.restau-list .restau-prev img {
+  width: 335px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  object-position: center bottom;
+}
+.restau-list .restau-prev .restau-prev__new-style {
+  background-color: #99E2D0;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 8px 12px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 2px;
+  color: #008766;
+}
+
+.restau-prev__heading {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFF;
+  border-radius: 0 0 15px 15px;
+  padding: 20px 24px 20px 14px;
+  box-shadow: 0 5px 5px #ebebeb;
+}
+.restau-prev__heading h3 {
+  font-size: 1.8rem;
+}
+.restau-prev__heading p {
+  font-weight: 100;
+}
+.restau-prev__heading i {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.restau-img-lanote {
+  object-position: 0 -150px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -96,3 +96,72 @@
         }
     }
 }
+
+.restau-list {
+    padding: 50px 20px 68px 20px;
+    background-color: $bg-primary;
+
+    h2 {
+        padding-bottom: 32px;;
+    }
+
+    .restau-prev {
+        width: 335px;
+        height: 250px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 23px;
+            img {
+                width: 335px;
+                height: 175px;
+                object-fit: cover;
+                border-radius: 15px 15px 0 0;
+                object-position: center bottom;
+            }
+
+            .restau-prev__new-style {
+                background-color: $color-tertiary;
+                position: absolute;
+                top : 12px;
+                right: 12px;
+                padding: 8px 12px;
+                font-size: 1.4rem;
+                font-weight: 500;
+                border-radius: 2px;
+                color: #008766;
+                    
+            }
+        }
+}
+
+.restau-prev__heading {
+    display: flex;
+    justify-content: space-between;
+    background-color: $white-color;
+    border-radius: 0 0 15px 15px;
+    padding: 20px 24px 20px 14px;
+    box-shadow: 0 5px 5px  #ebebeb;
+
+        h3 {
+            font-size: 1.8rem;
+        }
+        p {
+            font-weight: 100;
+        }
+        i {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+        }
+    
+    
+}
+
+// MODIFIER SPECIFICITÉ !!!!
+.restau-img-lanote {
+    object-position:  0 -150px;
+}
+// MODDIFIER SPECIFICITÉ !!!!
+
+

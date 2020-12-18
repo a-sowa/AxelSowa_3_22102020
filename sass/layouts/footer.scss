@@ -1,0 +1,20 @@
+footer {
+    background-color: $bg-footer;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0 36px 25px;
+        h3 {
+            font-family: 'Shrikhand', sans-serif;
+            color: $white-color;
+            font-weight: 200;
+            margin-bottom: 26px;
+        }
+        a {
+            text-decoration: none;
+            color: $white-color;
+                i{
+                    margin-right: 12px;
+                    font-size: 1.4rem;
+                }
+        }
+}
