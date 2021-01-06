@@ -61,12 +61,12 @@ footer h3 {
 }
 @media screen and (min-width: 400px) {
   footer h3 {
-    font-size: 26px;
+    font-size: 2.6rem;
   }
 }
 @media screen and (min-width: 675px) {
   footer h3 {
-    font-size: 32px;
+    font-size: 3.2rem;
     text-align: center;
   }
 }
@@ -87,15 +87,15 @@ footer .fa-hands-helping {
   display: flex;
   flex-direction: column;
 }
-.footer__links a:hover {
-  text-decoration: underline;
-  color: #dddddd;
-}
 @media screen and (min-width: 675px) {
   .footer__links {
     flex-direction: row;
     justify-content: space-evenly;
   }
+}
+.footer a:hover {
+  text-decoration: underline;
+  color: #dddddd;
 }
 
 .location-bar {
@@ -125,16 +125,16 @@ footer .fa-hands-helping {
   }
 }
 .home-intro h1 {
-  font-size: 26px;
+  font-size: 2.6rem;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 582px) {
   .home-intro h1 {
-    margin-bottom: 0;
+    margin-bottom: -20px;
   }
 }
 .home-intro p {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 100;
   margin-bottom: 32px;
 }
@@ -175,7 +175,7 @@ footer .fa-hands-helping {
 }
 .process-step i {
   margin: 0 26px 0 34px;
-  font-size: 20px;
+  font-size: 2rem;
   color: #7E7E7E;
 }
 .process-step p {
@@ -253,6 +253,11 @@ footer .fa-hands-helping {
   border-radius: 2px;
   color: #008766;
 }
+@media screen and (min-width: 700px) {
+  .restau-list .restau-prev .restau-prev__new-style {
+    right: 22px;
+  }
+}
 .restau-list .restau-prev #restau-img-lanote {
   object-position: 0 -150px;
 }
@@ -280,9 +285,8 @@ footer .fa-hands-helping {
 .restau-prev__heading i {
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 2.4rem;
   color: black;
 }
-
 
 /*# sourceMappingURL=style.css.map */
