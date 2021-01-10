@@ -275,6 +275,9 @@ footer .fa-hands-helping {
   border-radius: 0 0 15px 15px;
   padding: 20px 24px 20px 14px;
   box-shadow: 0 5px 5px #ebebeb;
+  /* .heart-hover:hover + .fa-heart {
+      opacity: 0;
+  } */
 }
 .restau-prev__heading h3 {
   font-size: 1.8rem;
@@ -282,11 +285,30 @@ footer .fa-hands-helping {
 .restau-prev__heading p {
   font-weight: 100;
 }
-.restau-prev__heading i {
-  display: flex;
-  align-items: center;
-  font-size: 2.4rem;
+.restau-prev__heading .fa-heart {
+  font-size: 2.8rem;
   color: black;
+  position: absolute;
+  right: 24px;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 750ms;
+  cursor: pointer;
+}
+.restau-prev__heading .heart-hover {
+  z-index: 2;
+  font-size: 2.8rem;
+  color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  cursor: pointer;
+  font-weight: 900;
+  opacity: 0;
+  transform-origin: 50% 0%;
+  transition: opacity 750ms;
+}
+.restau-prev__heading .heart-hover:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
