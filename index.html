@@ -8,10 +8,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/e2a6ae481a.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <title>Ohmyfood!</title>
     </head>
 
     <body>
+        <div class="loader">
+            <div class="spinner"></div>
+        </div>
+
         <div class="container">
             <header>
                 <a href="index.html">
@@ -68,7 +73,7 @@
                     </div>
                     
                     <div class="restau-list__listing">
-                        <div class="restau-prev">
+                        <a class="restau-prev" href="#">
                             <img src="public/img/restaurants/palette.jpg" class="restau-img" alt="" title="">
                             <p class="restau-prev__new-style">Nouveau</p>
 
@@ -83,13 +88,13 @@
                                     </i>
                                 </div>    
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="restau-prev">
+                        <a class="restau-prev" href="#">
                             <img src="public/img/restaurants/lanote.jpg" id="restau-img-lanote" alt="" title="">
                             <p class="restau-prev__new-style">Nouveau</p>
 
-                            <div class="restau-prev__heading">
+                            <div class="restau-prev__heading" >
                                 <div class="restau-prev__info">
                                     <h3 class="restau-prev__name">La note enchantée</h3>
                                     <p class="restau-prev__loc">Charonne</p>
@@ -99,7 +104,7 @@
                                     <i class="far fa-heart heart-hover"></i>
                                 </div>    
                             </div>
-                        </div>
+                        </a>
 
                         <div class="restau-prev restau-prev--3">
                             <img src="public/img/restaurants/francaise.jpg" class="restau-img" alt="" title="">

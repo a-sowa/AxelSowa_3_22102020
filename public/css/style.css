@@ -301,6 +301,7 @@ footer .fa-hands-helping {
   color: transparent;
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
+  background-clip: text;
   cursor: pointer;
   font-weight: 900;
   opacity: 0;
@@ -309,6 +310,29 @@ footer .fa-hands-helping {
 }
 .restau-prev__heading .heart-hover:hover {
   opacity: 1;
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+}
+
+.spinner {
+  width: 10rem;
+  height: 10rem;
+  border: 5px solid #eeeeee;
+  border-radius: 50%;
+  border-top-color: #9356DC;
+  border-bottom-color: #FF79DA;
+  animation: spin 1.5s infinite ease-in-out;
+  margin-top: 50%;
+  margin-left: 50%;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
