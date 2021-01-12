@@ -1,9 +1,17 @@
 header {
     box-shadow: 0 0 5px #CFCFCF;
     position: relative;
+    
     .logo {
         padding: 22px 0 12px 0;
         margin: auto;
         display: block;
+    }
+    .fa-arrow-left {
+        position: absolute;
+        font-size: 2.4rem;
+        bottom: 17px;
+        left: 25px;
+        color: $bg-footer;
     }
 } 

@@ -118,6 +118,13 @@ header .logo {
   margin: auto;
   display: block;
 }
+header .fa-arrow-left {
+  position: absolute;
+  font-size: 2.4rem;
+  bottom: 17px;
+  left: 25px;
+  color: #353535;
+}
 
 footer {
   background-color: #353535;
@@ -383,6 +390,15 @@ footer .fa-hands-helping {
 .restau-prev__heading .heart-hover:hover {
   opacity: 1;
   transform: scale(1.15);
+}
+
+.restau-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  background-color: #F6F6F6F6;
 }
 
 /*# sourceMappingURL=style.css.map */
