@@ -8,8 +8,33 @@
     max-width: 220px;
     min-width: 200px;
     max-height: 50px;
+    position: relative;
+    z-index: 2;
+    transition: transform 400ms;
     cursor: pointer;
-    
+
+        &:hover {
+            transform: scale 1.2;
+            
+                &::after {
+                    opacity: 0.15;
+                }
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            border-radius: 25px;
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 400ms;
+        }
+
     @media screen and (max-width: 290px) {
         font-size: 14px;
         

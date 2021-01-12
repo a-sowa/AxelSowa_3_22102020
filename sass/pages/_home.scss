@@ -9,7 +9,6 @@
     }
 }
 
-
 .home-intro {
     display: flex;
     flex-direction: column;
@@ -149,7 +148,7 @@
                 }   
             }
 
-            .restau-prev__new-style {
+            &__new-style {
                 background-color: $color-tertiary;
                 position: absolute;
                 top : 12px;
@@ -187,9 +186,11 @@
     h3 {
         font-size: 1.8rem;
     }
+
     p {
         font-weight: 100;
     }
+
     .fa-heart {
         font-size: 2.8rem;
         color: black;
@@ -198,9 +199,9 @@
         opacity: 1;
         transition: opacity 750ms;
         cursor: pointer;
-        transition: transform 500ms;
         z-index: 1;
     }
+
     .heart-hover {
         font-size: 2.8rem;
         color: transparent;
@@ -210,65 +211,12 @@
         cursor: pointer;
         font-weight: 900;
         opacity: 0;
-        transform-origin: 50% 0%;
-        transition: opacity 750ms;
+        transition: opacity 750ms transform 500ms;
         z-index: 2;
     }
+
     .heart-hover:hover {
         opacity: 1;
+        transform: scale(1.15);
       }
-    /* .heart-hover:hover + .fa-heart {
-        opacity: 0;
-    } */
-
-    
-}
-
-.loader {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: hide 1s 2s forwards;
-    position: absolute;
-    background-color: #fff;
-    z-index: 1;
-}
-
-.spinner {
-    width: 10rem;
-    height: 10rem;
-    border: 5px solid #eeeeee;
-    border-radius: 50%;
-    border-top-color: $color-primary;
-    border-bottom-color: $color-secondary;
-    animation: spin 1.5s infinite ease-in-out;
-}
-
-.container {
-    position: absolute;
-    opacity: 0;
-    animation: visibility 1s 2s forwards;
-    width: 100%;
-}
-
-
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes hide {
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes visibility {
-    to {
-        opacity: 1;
-    }
 }

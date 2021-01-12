@@ -38,15 +38,15 @@ footer {
         display: flex;
         flex-direction: column;
 
+        a:hover {
+            text-decoration: underline;
+            color: rgb(221, 221, 221);
+        }
+
         @media screen and (min-width:675px) {
             flex-direction: row;
             justify-content: space-evenly;
             
         }
-    }
-
-    a:hover {
-        text-decoration: underline;
-        color: rgb(221, 221, 221);
     }
 }
