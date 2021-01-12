@@ -120,8 +120,8 @@ header .logo {
 }
 header .fa-arrow-left {
   position: absolute;
-  font-size: 2.4rem;
-  bottom: 17px;
+  font-size: 2rem;
+  bottom: 20px;
   left: 25px;
   color: #353535;
 }
@@ -399,6 +399,98 @@ footer .fa-hands-helping {
 
 .menu {
   background-color: #F6F6F6F6;
+  padding: 30px 20px 70px 20px;
+  border-radius: 40px 40px 0 0;
+  margin-top: -50px;
+  position: relative;
+  opacity: 1;
+}
+.menu__headings {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.menu__headings h1 {
+  font-family: "Shrikhand";
+  font-size: 2.6rem;
+}
+.menu__headings .fa-heart {
+  font-size: 2.4rem;
+  color: black;
+  position: absolute;
+  top: 35px;
+  right: 40px;
+  opacity: 1;
+  transition: opacity 400ms;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__headings .heart-hover {
+  font-size: 2.4rem;
+  color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  cursor: pointer;
+  font-weight: 900;
+  opacity: 0;
+  transition: opacity 400ms transform 400ms;
+  z-index: 2;
+}
+.menu__headings .heart-hover:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+.menu h2 {
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin-left: 5px;
+}
+.menu h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.menu .btn {
+  display: block;
+  margin: auto auto;
+  text-align: center;
+  min-width: 185px;
+  width: 185px;
+}
+
+hr {
+  width: 40px;
+  height: 3px;
+  border: none;
+  background-color: #99E2D0;
+  margin: 5px 0 15px 5px;
+}
+
+.dish {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 68px;
+  background-color: #FFF;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 12px 22px 12px 12px;
+  box-shadow: 0 10px 10px #ebebeb;
+}
+.dish__description {
+  display: flex;
+  justify-content: space-between;
+}
+.dish p {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.dish .price {
+  font-weight: 500;
+}
+
+.menu__starters, .menu__main-dishes, .menu__desserts {
+  margin-bottom: 35px;
 }
 
 /*# sourceMappingURL=style.css.map */
