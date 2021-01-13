@@ -178,6 +178,7 @@
 .restau-prev__heading {
     display: flex;
     justify-content: space-between;
+    position: relative;
     background-color: $white-color;
     border-radius: 0 0 15px 15px;
     padding: 20px 24px 20px 14px;
@@ -201,7 +202,7 @@
         cursor: pointer;
         z-index: 1;
     }
-
+    
     .heart-hover {
         font-size: 2.8rem;
         color: transparent;
@@ -214,7 +215,7 @@
         transition: opacity 750ms transform 500ms;
         z-index: 2;
     }
-
+    
     .heart-hover:hover {
         opacity: 1;
         transform: scale(1.15);
