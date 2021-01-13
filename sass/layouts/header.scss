@@ -13,5 +13,9 @@ header {
         bottom: 20px;
         left: 25px;
         color: $bg-footer;
+        transition: transform 400ms;
+        &:hover {
+            transform: scale(1.5);
+        }
     }
 } 
