@@ -42,6 +42,16 @@ div, p {
     left: 0px;
   }
 }
+@keyframes visible {
+  to {
+    transform: translateX(-60px);
+  }
+}
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .loader {
   width: 100vw;
   height: 100vh;
@@ -505,6 +515,9 @@ svg {
   margin-bottom: 15px;
   padding: 12px 22px 12px 12px;
   box-shadow: 0 10px 10px #ebebeb;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 .dish__description {
   display: flex;
@@ -516,6 +529,30 @@ svg {
 }
 .dish .price {
   font-weight: 500;
+}
+.dish:hover .price {
+  animation: visible 400ms both;
+}
+.dish:hover .check {
+  animation: visible 400ms both;
+}
+.dish:hover .fa-check-circle {
+  animation: rotation 400ms forwards;
+}
+.dish .check {
+  height: 68px;
+  width: 60px;
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  position: absolute;
+  left: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dish .check .fa-check-circle {
+  color: #FFF;
+  font-size: 20px;
 }
 
 .menu__starters, .menu__main-dishes, .menu__desserts {

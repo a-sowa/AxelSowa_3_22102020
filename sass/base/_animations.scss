@@ -17,3 +17,15 @@
         left: 0px;
     }
 }
+
+@keyframes visible {
+    to {
+        transform: translateX(-60px);
+    }
+}
+
+@keyframes rotation {
+    to {
+        transform: rotate(360deg);
+    }
+}
