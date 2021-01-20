@@ -40,6 +40,7 @@
 .process {
     padding: 50px 20px 68px 20px;
 
+
         h2 {
             padding-bottom: 32px;;
         }
@@ -90,6 +91,11 @@
         border-radius: 20px;
         margin-bottom: 22px;
         box-shadow: 0 10px 10px  #ebebeb;
+
+        @media screen and (max-width: 365px) {
+            padding: 0 40px 0 0;
+            text-align: center;
+        }
 
             &__3 {
                 background-color: #F5EDFF;
@@ -166,6 +172,9 @@
             
             #restau-img-lanote {
                 object-position:  0 -150px;
+                @media screen and (max-width: 315px) {
+                    object-position: center bottom;
+                }
             }
 
             @media screen and (min-width: 700px) {
@@ -249,15 +258,3 @@
    }
 }
 
-
-
-
-.heart--svg-2 {
-    width: 28px;
-    font-size: 28px;
-    height: auto;
-    background-image: red;
-    background-color: red;
-    color: red;
-    fill: red;
-}

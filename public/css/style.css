@@ -175,6 +175,7 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 25px 25px 36px 25px;
+  line-height: 30px;
 }
 footer h3 {
   font-family: "Shrikhand", sans-serif;
@@ -314,6 +315,12 @@ footer .fa-hands-helping {
   margin-bottom: 22px;
   box-shadow: 0 10px 10px #ebebeb;
 }
+@media screen and (max-width: 365px) {
+  .process-step .step-info {
+    padding: 0 40px 0 0;
+    text-align: center;
+  }
+}
 .process-step .step-info__3 {
   background-color: #F5EDFF;
 }
@@ -387,6 +394,11 @@ footer .fa-hands-helping {
 }
 .restau-list .restau-prev #restau-img-lanote {
   object-position: 0 -150px;
+}
+@media screen and (max-width: 315px) {
+  .restau-list .restau-prev #restau-img-lanote {
+    object-position: center bottom;
+  }
 }
 @media screen and (min-width: 700px) {
   .restau-list .restau-prev {
@@ -463,16 +475,6 @@ footer .fa-hands-helping {
   opacity: 1;
 }
 
-.heart--svg-2 {
-  width: 28px;
-  font-size: 28px;
-  height: auto;
-  background-image: red;
-  background-color: red;
-  color: red;
-  fill: red;
-}
-
 .restau-img {
   width: 100%;
   object-fit: cover;
@@ -503,6 +505,16 @@ footer .fa-hands-helping {
   font-family: "Shrikhand";
   font-size: 2.6rem;
 }
+@media screen and (max-width: 350px) {
+  .menu__headings h1 {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  .menu__headings h1 {
+    font-size: 2rem;
+  }
+}
 .menu__headings .fa-heart {
   font-size: 2.8rem;
   color: black;
@@ -513,6 +525,11 @@ footer .fa-hands-helping {
   transition: opacity 400ms;
   cursor: pointer;
   z-index: 1;
+}
+@media screen and (max-width: 319px) {
+  .menu__headings .fa-heart {
+    right: 25px;
+  }
 }
 .menu__headings .heart-hover {
   font-size: 2.8rem;
