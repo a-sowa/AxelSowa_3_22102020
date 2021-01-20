@@ -87,7 +87,22 @@
 }
 
 
-
+.dishes {
+    .dish {
+        &:nth-child(1){
+            animation: appearance 1s 2700ms forwards;
+          }
+          &:nth-child(2){
+            animation: appearance 1s 2900ms forwards;
+          }
+          &:nth-child(3){
+            animation: appearance 1s 3100ms forwards;
+          }
+          &:nth-child(4){
+            animation: appearance 1s 3300ms forwards;
+          }
+    }
+}
 .dish {
     display: flex;
     flex-direction: column;
@@ -101,6 +116,8 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+    opacity: 0;
+    
         &__description {
             display: flex;
             justify-content: space-between;
@@ -112,20 +129,20 @@
         }
         .price {
             font-weight: 500;
+            animation: slide-off 400ms;
         }
 
         &:hover {
 
             .price {
-                animation: visible 400ms both;
+                animation: slide-on 400ms both;
             }
             .check {
-                animation: visible 400ms both;
+                animation: slide-on 400ms both;
             }    
             .fa-check-circle {
                 animation: rotation 400ms forwards;
             }
-
             
         }
         
@@ -139,7 +156,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
+            animation: slide-off 400ms;
         
             .fa-check-circle {
                 color: $white-color;

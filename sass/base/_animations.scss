@@ -18,14 +18,41 @@
     }
 }
 
-@keyframes visible {
+@keyframes slide-on {
+    from {
+        transform: translateX(0px);
+    }
     to {
         transform: translateX(-60px);
+    }
+}
+
+@keyframes slide-off {
+    from {
+        transform: translateX(-60px);
+    }
+    to {
+        transform: translateX(0px);
     }
 }
 
 @keyframes rotation {
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes appearance {
+    0% {
+        transform: translateY(25px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
     }
 }

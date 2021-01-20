@@ -42,14 +42,37 @@ div, p {
     left: 0px;
   }
 }
-@keyframes visible {
+@keyframes slide-on {
+  from {
+    transform: translateX(0px);
+  }
   to {
     transform: translateX(-60px);
+  }
+}
+@keyframes slide-off {
+  from {
+    transform: translateX(-60px);
+  }
+  to {
+    transform: translateX(0px);
   }
 }
 @keyframes rotation {
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes appearance {
+  0% {
+    transform: translateY(25px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 .loader {
@@ -505,6 +528,19 @@ svg {
   margin: 5px 0 15px 5px;
 }
 
+.dishes .dish:nth-child(1) {
+  animation: appearance 1s 2700ms forwards;
+}
+.dishes .dish:nth-child(2) {
+  animation: appearance 1s 2900ms forwards;
+}
+.dishes .dish:nth-child(3) {
+  animation: appearance 1s 3100ms forwards;
+}
+.dishes .dish:nth-child(4) {
+  animation: appearance 1s 3300ms forwards;
+}
+
 .dish {
   display: flex;
   flex-direction: column;
@@ -518,6 +554,7 @@ svg {
   position: relative;
   overflow: hidden;
   width: 100%;
+  opacity: 0;
 }
 .dish__description {
   display: flex;
@@ -529,12 +566,13 @@ svg {
 }
 .dish .price {
   font-weight: 500;
+  animation: slide-off 400ms;
 }
 .dish:hover .price {
-  animation: visible 400ms both;
+  animation: slide-on 400ms both;
 }
 .dish:hover .check {
-  animation: visible 400ms both;
+  animation: slide-on 400ms both;
 }
 .dish:hover .fa-check-circle {
   animation: rotation 400ms forwards;
@@ -549,6 +587,7 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: slide-off 400ms;
 }
 .dish .check .fa-check-circle {
   color: #FFF;
