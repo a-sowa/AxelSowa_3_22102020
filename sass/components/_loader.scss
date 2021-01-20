@@ -17,7 +17,7 @@
     border-radius: 50%;
     border-top-color: $color-primary;
     border-bottom-color: $color-secondary;
-    animation: spin 1.5s 2 ease-in-out;
+    animation: spin 1.5s 3 ease-in-out;
     
 }
 
@@ -30,6 +30,6 @@
     left: -99999px;
     opacity: 0;
     width: 100%;
-    animation: visibility 0.5s 2s forwards;
+    animation: visibility 0.5s 1.7s forwards;
 }
 
