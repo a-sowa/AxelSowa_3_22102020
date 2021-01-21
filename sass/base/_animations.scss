@@ -56,3 +56,20 @@
         opacity: 1;
     }
 }
+
+@keyframes slide-on-2 {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 60px;
+    }
+  }
+  @keyframes slide-off-2 {
+    from {
+      width: 60px;
+    }
+    to {
+      width: 0px;
+    }
+  }

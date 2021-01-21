@@ -75,6 +75,22 @@ div, p {
     opacity: 1;
   }
 }
+@keyframes slide-on-2 {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 60px;
+  }
+}
+@keyframes slide-off-2 {
+  from {
+    width: 60px;
+  }
+  to {
+    width: 0px;
+  }
+}
 .loader {
   width: 100vw;
   height: 100vh;
@@ -430,10 +446,10 @@ footer .fa-hands-helping {
   opacity: 1;
   transition: opacity 750ms;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
 }
 .restau-prev__heading .heart-hover {
-  font-size: 2.8rem;
+  font-size: 2.7rem;
   color: transparent;
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
@@ -441,12 +457,11 @@ footer .fa-hands-helping {
   cursor: pointer;
   font-weight: 900;
   opacity: 0;
-  transition: opacity 750ms transform 500ms;
-  z-index: 2;
+  transition: opacity 750ms;
+  z-index: 1;
 }
-.restau-prev__heading .heart-hover:hover {
+.restau-prev__heading .fa-heart:hover + .heart-hover {
   opacity: 1;
-  transform: scale(1.15);
 }
 
 .heart--svg {
@@ -519,20 +534,14 @@ footer .fa-hands-helping {
   font-size: 2.8rem;
   color: black;
   position: absolute;
-  top: 35px;
-  right: 40px;
+  right: 24px;
   opacity: 1;
-  transition: opacity 400ms;
+  transition: opacity 750ms;
   cursor: pointer;
-  z-index: 1;
-}
-@media screen and (max-width: 319px) {
-  .menu__headings .fa-heart {
-    right: 25px;
-  }
+  z-index: 2;
 }
 .menu__headings .heart-hover {
-  font-size: 2.8rem;
+  font-size: 2.7rem;
   color: transparent;
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
@@ -540,12 +549,11 @@ footer .fa-hands-helping {
   cursor: pointer;
   font-weight: 900;
   opacity: 0;
-  transition: opacity 400ms transform 400ms;
-  z-index: 2;
+  transition: opacity 750ms;
+  z-index: 1;
 }
-.menu__headings .heart-hover:hover {
+.menu__headings .fa-heart:hover + .heart-hover {
   opacity: 1;
-  transform: scale(1.15);
 }
 .menu h2 {
   font-weight: 300;
@@ -602,18 +610,15 @@ footer .fa-hands-helping {
 .dish__description {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .dish p {
   font-size: 1.4rem;
   font-weight: 300;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-width: 0;
 }
 .dish .price {
   font-weight: 500;
-  animation: slide-off 400ms;
+  animation: slide-off 400ms both;
 }
 .dish:hover .price {
   animation: slide-on 400ms both;

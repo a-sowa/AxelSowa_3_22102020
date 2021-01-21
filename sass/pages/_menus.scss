@@ -1,199 +1,191 @@
 .restau-img {
-        width: 100%;
-        object-fit: cover;
-        max-height: 680px;
+    width: 100%;
+    object-fit: cover;
+    max-height: 680px;
 }
 
 .menu {
-    background-color: $bg-primary;
-    padding: 30px 20px 70px 20px;
-    border-radius: 40px 40px 0 0;
-    margin-top: -50px;
-    position: relative;
-    opacity: 1;
-        @media screen and (min-width: 900px) {
-            max-width: 75%; 
-            margin: -75px auto 0 auto;
-            box-shadow: 0px 3px 10px -3px;
-        }
+background-color: $bg-primary;
+padding: 30px 20px 70px 20px;
+border-radius: 40px 40px 0 0;
+margin-top: -50px;
+position: relative;
+opacity: 1;
+    @media screen and (min-width: 900px) {
+        max-width: 75%; 
+        margin: -75px auto 0 auto;
+        box-shadow: 0px 3px 10px -3px;
+    }
 
-        &__headings {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 35px;
+    &__headings {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
 
-            h1{
-                font-family: 'Shrikhand';
-                font-size: 2.6rem;
-                @media screen and (max-width: 350px) {
-                    font-size: 2.2rem;
-                }
-                @media screen and (max-width: 300px) {
-                    font-size: 2rem;
-                }
+        h1{
+            font-family: 'Shrikhand';
+            font-size: 2.6rem;
+            @media screen and (max-width: 350px) {
+                font-size: 2.2rem;
             }
-
-            .fa-heart {
-                font-size: 2.8rem;
-                color: black;
-                position: absolute;
-                top: 35px;
-                right: 40px;
-                opacity: 1;
-                transition: opacity 400ms;
-                cursor: pointer;
-                z-index: 1;
-                @media screen and (max-width: 319px) {
-                    right: 25px;
-                }
-            }
-
-            .heart-hover {
-                font-size: 2.8rem;
-                color: transparent;
-                background-image: linear-gradient($color-secondary, $color-primary);
-                -webkit-background-clip: text;
-                background-clip: text;
-                cursor: pointer;
-                font-weight: 900;
-                opacity: 0;
-                transition: opacity 400ms transform 400ms;
-                z-index: 2;
-            }
-
-            .heart-hover:hover {
-                opacity: 1;
-                transform: scale(1.15);
+            @media screen and (max-width: 300px) {
+                font-size: 2rem;
             }
         }
 
-        h2 {
-            font-weight: 300;
-            font-size: 1.6rem;
-            margin-left: 5px;
+        .fa-heart {
+            font-size: 2.8rem;
+            color: black;
+            position: absolute;
+            right: 24px;
+            opacity: 1;
+            transition: opacity 750ms;
+            cursor: pointer;
+            z-index: 2;
         }
-    
-        h3{
-            font-size: 1.7rem;
-            font-weight: 500;
+        
+        .heart-hover {
+            font-size: 2.7rem;
+            color: transparent;
+            background-image: linear-gradient($color-secondary, $color-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            cursor: pointer;
+            font-weight: 900;
+            opacity:  0;
+            transition: opacity 750ms;
+            z-index: 1;
         }
+        
+        .fa-heart:hover + .heart-hover{
+            opacity: 1;
+          }
+    }
 
-        .btn {
-            display: block;
-            margin: auto auto;
-            text-align: center;
-            min-width: 185px;
-            width: 185px;
-        }
+    h2 {
+        font-weight: 300;
+        font-size: 1.6rem;
+        margin-left: 5px;
+    }
 
-        hr {
-            width: 40px;
-            height: 3px;
-            border: none;
-            background-color: $color-tertiary;
-            margin: 5px 0 15px 5px;
-        }
+    h3{
+        font-size: 1.7rem;
+        font-weight: 500;
+    }
+
+    .btn {
+        display: block;
+        margin: auto auto;
+        text-align: center;
+        min-width: 185px;
+        width: 185px;
+    }
+
+    hr {
+        width: 40px;
+        height: 3px;
+        border: none;
+        background-color: $color-tertiary;
+        margin: 5px 0 15px 5px;
+    }
 }
 
 
 .dishes {
-    .dish {
-        &:nth-child(1){
-            animation: appearance 1s 2700ms forwards;
-          }
-          &:nth-child(2){
-            animation: appearance 1s 2900ms forwards;
-          }
-          &:nth-child(3){
-            animation: appearance 1s 3100ms forwards;
-          }
-          &:nth-child(4){
-            animation: appearance 1s 3300ms forwards;
-          }
-    }
+.dish {
+    &:nth-child(1){
+        animation: appearance 1s 2700ms forwards;
+      }
+      &:nth-child(2){
+        animation: appearance 1s 2900ms forwards;
+      }
+      &:nth-child(3){
+        animation: appearance 1s 3100ms forwards;
+      }
+      &:nth-child(4){
+        animation: appearance 1s 3300ms forwards;
+      }
+}
 }
 
 .dish {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 68px;
-    background-color: $white-color;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    padding: 12px 22px 12px 12px;
-    box-shadow: 0 10px 10px  #ebebeb;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    opacity: 0;
-    
-        &__description {
-            display: flex;
-            justify-content: space-between;
-        }
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+height: 68px;
+background-color: $white-color;
+border-radius: 15px;
+margin-bottom: 15px;
+padding: 12px 22px 12px 12px;
+box-shadow: 0 10px 10px  #ebebeb;
+position: relative;
+overflow: hidden;
+width: 100%;
+opacity: 0;
 
-        p {
-            font-size: 1.4rem;
-            font-weight: 300;
-            white-space: nowrap; 
-            overflow: hidden;
-            text-overflow: ellipsis;
-            min-width: 0;
-        }
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    p {
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
+    .price {
+        font-weight: 500;
+        animation: slide-off 400ms both;
+    }
+
+    &:hover {
+
         .price {
-            font-weight: 500;
-            animation: slide-off 400ms;
+            animation: slide-on 400ms both;
         }
-
-        &:hover {
-
-            .price {
-                animation: slide-on 400ms both;
-            }
-            .check {
-                animation: slide-on 400ms both;
-            }    
-            .fa-check-circle {
-                animation: rotation 400ms forwards;
-            }
-            
-        }
-        
         .check {
-            height: 68px;
-            width: 60px;
-            background-color: $color-tertiary;
-            border-radius: 0px 15px 15px 0px;
-            position: absolute;
-            left: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            animation: slide-off 400ms;
-        
-            .fa-check-circle {
-                color: $white-color;
-                font-size: 20px;
-        
-            }
+            animation: slide-on 400ms both;
+        }    
+        .fa-check-circle {
+            animation: rotation 400ms forwards;
         }
+        
+    }
+    
+    .check {
+        height: 68px;
+        width: 60px;
+        background-color: $color-tertiary;
+        border-radius: 0px 15px 15px 0px;
+        position: absolute;
+        left: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: slide-off 400ms;
+    
+        .fa-check-circle {
+            color: $white-color;
+            font-size: 20px;
+    
+        }
+    }
 }
 
 
 
 .menu__starters, .menu__main-dishes, .menu__desserts {
-    margin-bottom: 35px;
+margin-bottom: 35px;
 }
 
 .menu__desserts {
-    margin-bottom: 50px;
+margin-bottom: 50px;
 }
 
 
 .comment {
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-width: 0;
+white-space: nowrap; 
+overflow: hidden;
+text-overflow: ellipsis;
+min-width: 0;
 }
