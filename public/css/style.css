@@ -44,18 +44,18 @@ div, p {
 }
 @keyframes slide-on {
   from {
-    transform: translateX(0px);
+    width: 0px;
   }
   to {
-    transform: translateX(-60px);
+    width: 60px;
   }
 }
 @keyframes slide-off {
   from {
-    transform: translateX(-60px);
+    width: 60px;
   }
   to {
-    transform: translateX(0px);
+    width: 0px;
   }
 }
 @keyframes rotation {
@@ -73,22 +73,6 @@ div, p {
   100% {
     transform: translateY(0px);
     opacity: 1;
-  }
-}
-@keyframes slide-on-2 {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 60px;
-  }
-}
-@keyframes slide-off-2 {
-  from {
-    width: 60px;
-  }
-  to {
-    width: 0px;
   }
 }
 .loader {
@@ -579,49 +563,43 @@ footer .fa-hands-helping {
   margin: 5px 0 15px 5px;
 }
 
-.dishes .dish:nth-child(1) {
-  animation: appearance 1s 2700ms forwards;
-}
-.dishes .dish:nth-child(2) {
-  animation: appearance 1s 2900ms forwards;
-}
-.dishes .dish:nth-child(3) {
-  animation: appearance 1s 3100ms forwards;
-}
-.dishes .dish:nth-child(4) {
-  animation: appearance 1s 3300ms forwards;
-}
-
 .dish {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 68px;
   background-color: #FFF;
   border-radius: 15px;
   margin-bottom: 15px;
-  padding: 12px 22px 12px 12px;
   box-shadow: 0 10px 10px #ebebeb;
   position: relative;
   overflow: hidden;
   width: 100%;
   opacity: 0;
 }
+.dish__title {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  padding: 12px 22px 12px 12px;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .dish__description {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.dish p {
-  font-size: 1.4rem;
+.dish .comment {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
   font-weight: 300;
+  font-size: 1.4rem;
 }
 .dish .price {
+  font-size: 1.4rem;
   font-weight: 500;
-  animation: slide-off 400ms both;
-}
-.dish:hover .price {
-  animation: slide-on 400ms both;
 }
 .dish:hover .check {
   animation: slide-on 400ms both;
@@ -631,11 +609,9 @@ footer .fa-hands-helping {
 }
 .dish .check {
   height: 68px;
-  width: 60px;
+  width: 0px;
   background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
-  position: absolute;
-  left: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -645,6 +621,18 @@ footer .fa-hands-helping {
   color: #FFF;
   font-size: 20px;
 }
+.dish:nth-child(1) {
+  animation: appearance 1s 2700ms forwards;
+}
+.dish:nth-child(2) {
+  animation: appearance 1s 2900ms forwards;
+}
+.dish:nth-child(3) {
+  animation: appearance 1s 3100ms forwards;
+}
+.dish:nth-child(4) {
+  animation: appearance 1s 3300ms forwards;
+}
 
 .menu__starters, .menu__main-dishes, .menu__desserts {
   margin-bottom: 35px;
@@ -652,13 +640,6 @@ footer .fa-hands-helping {
 
 .menu__desserts {
   margin-bottom: 50px;
-}
-
-.comment {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-width: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
