@@ -47,12 +47,12 @@ div, p {
     width: 0px;
   }
   to {
-    width: 60px;
+    width: 77px;
   }
 }
 @keyframes slide-off {
   from {
-    width: 60px;
+    width: 77px;
   }
   to {
     width: 0px;
@@ -525,7 +525,7 @@ footer .fa-hands-helping {
   z-index: 2;
 }
 .menu__headings .heart-hover {
-  font-size: 2.7rem;
+  font-size: 2.6rem;
   color: transparent;
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
@@ -547,6 +547,11 @@ footer .fa-hands-helping {
 .menu h3 {
   font-size: 1.7rem;
   font-weight: 500;
+}
+@media screen and (max-width: 330px) {
+  .menu h3 {
+    font-size: 1.5rem;
+  }
 }
 .menu .btn {
   display: block;
@@ -583,6 +588,9 @@ footer .fa-hands-helping {
   padding: 12px 22px 12px 12px;
   flex-direction: column;
   justify-content: space-between;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .dish__description {
   display: flex;
@@ -597,12 +605,17 @@ footer .fa-hands-helping {
   font-weight: 300;
   font-size: 1.4rem;
 }
+@media screen and (max-width: 330px) {
+  .dish .comment {
+    font-size: 1.1rem;
+  }
+}
 .dish .price {
   font-size: 1.4rem;
   font-weight: 500;
 }
 .dish:hover .check {
-  animation: slide-on 400ms both;
+  animation: slide-on 400ms forwards;
 }
 .dish:hover .fa-check-circle {
   animation: rotation 400ms forwards;
