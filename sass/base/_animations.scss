@@ -1,6 +1,7 @@
 @keyframes spin {
     to {
         transform: rotate(360deg);
+        overflow: hidden;
     }
 }
 
@@ -53,6 +54,18 @@
 
     100% {
         transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes overflow {
+    to {
+        overflow-y: visible;
+    }
+}
+
+@keyframes opacity {
+    to {
         opacity: 1;
     }
 }

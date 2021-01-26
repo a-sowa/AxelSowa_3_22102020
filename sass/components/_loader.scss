@@ -25,11 +25,11 @@
     position: relative;
 }
 
+
 .container {
     position: absolute;
     left: -99999px;
     opacity: 0;
     width: 100%;
-    animation: visibility 0.5s 1.7s forwards;
+    animation: visibility 0.3s 1.7s forwards;
 }
-

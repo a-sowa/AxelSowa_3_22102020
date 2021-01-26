@@ -21,6 +21,7 @@ opacity: 1;
         display: flex;
         justify-content: space-between;
         margin-bottom: 35px;
+        position: relative;
 
         h1{
             font-family: 'Shrikhand';
@@ -37,16 +38,25 @@ opacity: 1;
             font-size: 2.8rem;
             color: black;
             position: absolute;
-            right: 24px;
+            right: 25px;
             opacity: 1;
             transition: opacity 750ms;
             cursor: pointer;
             z-index: 2;
+            @media screen and (max-width: 360px) {
+                right: 20px;
+            }
+            @media screen and (max-width: 320px) {
+                right: 10px;
+            }
         }
         
         .heart-hover {
             font-size: 2.6rem;
             color: transparent;
+            position: absolute;
+            right: 26px;
+            top: 1px;
             background-image: linear-gradient($color-secondary, $color-primary);
             -webkit-background-clip: text;
             background-clip: text;
@@ -55,10 +65,16 @@ opacity: 1;
             opacity:  0;
             transition: opacity 750ms;
             z-index: 1;
+            @media screen and (max-width: 360px) {
+                right: 21px;
+            }
+            @media screen and (max-width: 320px) {
+                right: 11px;
+            }
         }
         
         .fa-heart:hover + .heart-hover{
-            opacity: 1;
+            opacity: 1
           }
     }
 

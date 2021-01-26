@@ -14,6 +14,12 @@ a {
 }
 
 body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  animation: overflow 200ms 2.8s forwards;
+}
+
+body {
   font-family: "Roboto", sans-serif;
 }
 
@@ -28,6 +34,7 @@ div, p {
 @keyframes spin {
   to {
     transform: rotate(360deg);
+    overflow: hidden;
   }
 }
 @keyframes hide {
@@ -75,6 +82,16 @@ div, p {
     opacity: 1;
   }
 }
+@keyframes overflow {
+  to {
+    overflow-y: visible;
+  }
+}
+@keyframes opacity {
+  to {
+    opacity: 1;
+  }
+}
 .loader {
   width: 100vw;
   height: 100vh;
@@ -106,7 +123,7 @@ div, p {
   left: -99999px;
   opacity: 0;
   width: 100%;
-  animation: visibility 0.5s 1.7s forwards;
+  animation: visibility 0.3s 1.7s forwards;
 }
 
 .btn {
@@ -121,11 +138,10 @@ div, p {
   max-height: 50px;
   position: relative;
   z-index: 2;
-  transition: transform 400ms;
   cursor: pointer;
 }
 .btn:hover {
-  transform: scale 1.2;
+  box-shadow: 0 6px 7px #999999;
 }
 .btn:hover::after {
   opacity: 0.15;
@@ -433,8 +449,11 @@ footer .fa-hands-helping {
   z-index: 2;
 }
 .restau-prev__heading .heart-hover {
-  font-size: 2.7rem;
+  font-size: 2.6rem;
   color: transparent;
+  position: absolute;
+  right: 25px;
+  top: 21px;
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
@@ -445,32 +464,6 @@ footer .fa-hands-helping {
   z-index: 1;
 }
 .restau-prev__heading .fa-heart:hover + .heart-hover {
-  opacity: 1;
-}
-
-.heart--svg {
-  width: 28px;
-  height: 28px;
-  -webkit-mask: url(../../public/img/icons/heart-regular-solid.svg) no-repeat center;
-  mask: url(../../public/img/icons/heart-regular-solid.svg) no-repeat center;
-  background-color: #000;
-  position: relative;
-  z-index: 1;
-}
-
-.heart--svg-hover {
-  width: 18px;
-  height: 18px;
-  -webkit-mask: url(../../public/img/icons/heart-regular-full.svg) no-repeat center;
-  mask: url(../../public/img/icons/heart-regular-full.svg) no-repeat center;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  z-index: 2;
-  opacity: 0;
-}
-.heart--svg-hover:hover {
   opacity: 1;
 }
 
@@ -499,6 +492,7 @@ footer .fa-hands-helping {
   display: flex;
   justify-content: space-between;
   margin-bottom: 35px;
+  position: relative;
 }
 .menu__headings h1 {
   font-family: "Shrikhand";
@@ -518,15 +512,28 @@ footer .fa-hands-helping {
   font-size: 2.8rem;
   color: black;
   position: absolute;
-  right: 24px;
+  right: 25px;
   opacity: 1;
   transition: opacity 750ms;
   cursor: pointer;
   z-index: 2;
 }
+@media screen and (max-width: 360px) {
+  .menu__headings .fa-heart {
+    right: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .menu__headings .fa-heart {
+    right: 10px;
+  }
+}
 .menu__headings .heart-hover {
   font-size: 2.6rem;
   color: transparent;
+  position: absolute;
+  right: 26px;
+  top: 1px;
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
@@ -535,6 +542,16 @@ footer .fa-hands-helping {
   opacity: 0;
   transition: opacity 750ms;
   z-index: 1;
+}
+@media screen and (max-width: 360px) {
+  .menu__headings .heart-hover {
+    right: 21px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .menu__headings .heart-hover {
+    right: 11px;
+  }
 }
 .menu__headings .fa-heart:hover + .heart-hover {
   opacity: 1;

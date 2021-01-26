@@ -214,8 +214,11 @@
     }
     
     .heart-hover {
-        font-size: 2.7rem;
+        font-size: 2.6rem;
         color: transparent;
+        position: absolute;
+        right: 25px;
+        top: 21px;
         background-image: linear-gradient($color-secondary, $color-primary);
         -webkit-background-clip: text;
         background-clip: text;
@@ -231,29 +234,5 @@
       }
 }
 
-.heart--svg {
-    width: 28px;
-    height: 28px;
-    -webkit-mask:  url(../../public/img/icons/heart-regular-solid.svg) no-repeat center;
-    mask: url(../../public/img/icons/heart-regular-solid.svg) no-repeat center;   
-    background-color: #000;
-    position: relative;
-    z-index: 1;
-}
 
-.heart--svg-hover {
-   width: 18px;
-   height: 18px;
-   -webkit-mask:  url(../../public/img/icons/heart-regular-full.svg) no-repeat center;
-   mask: url(../../public/img/icons/heart-regular-full.svg) no-repeat center;   
-   background-image: linear-gradient($color-secondary, $color-primary);
-   position: absolute;
-   top: 5px;
-   left: 5px;
-   z-index: 2;
-   opacity: 0;
-   &:hover {
-       opacity: 1;
-   }
-}
 

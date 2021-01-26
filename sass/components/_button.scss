@@ -10,11 +10,10 @@
     max-height: 50px;
     position: relative;
     z-index: 2;
-    transition: transform 400ms;
     cursor: pointer;
 
         &:hover {
-            transform: scale 1.2;
+            box-shadow: 0 6px 7px  #999999;
             
                 &::after {
                     opacity: 0.15;

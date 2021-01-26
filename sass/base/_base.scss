@@ -12,3 +12,9 @@ a {
     text-decoration: none;
     color: black;
 }
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    animation: overflow 200ms 2.8s forwards;
+}
