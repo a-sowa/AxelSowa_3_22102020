@@ -5,12 +5,12 @@
 }
 
 .menu {
-background-color: $bg-primary;
-padding: 30px 20px 70px 20px;
-border-radius: 40px 40px 0 0;
-margin-top: -50px;
-position: relative;
-opacity: 1;
+    background-color: $bg-primary;
+    padding: 30px 20px 70px 20px;
+    border-radius: 40px 40px 0 0;
+    margin-top: -50px;
+    position: relative;
+    opacity: 1;
 
     @media screen and (min-width: 900px) {
         max-width: 75%; 
@@ -27,6 +27,7 @@ opacity: 1;
         h1{
             font-family: 'Shrikhand';
             font-size: 2.6rem;
+
             @media screen and (max-width: 350px) {
                 font-size: 2.2rem;
             }
@@ -44,6 +45,7 @@ opacity: 1;
             transition: opacity 750ms;
             cursor: pointer;
             z-index: 2;
+
             @media screen and (max-width: 360px) {
                 right: 20px;
             }
@@ -66,6 +68,7 @@ opacity: 1;
             opacity:  0;
             transition: opacity 750ms;
             z-index: 1;
+
             @media screen and (max-width: 360px) {
                 right: 21px;
             }
@@ -111,17 +114,17 @@ opacity: 1;
 }
 
 .dish {
-display: flex;
-justify-content: space-between;
-height: 68px;
-background-color: $white-color;
-border-radius: 15px;
-margin-bottom: 15px;
-box-shadow: 0 10px 10px  #ebebeb;
-position: relative;
-overflow: hidden;
-width: 100%;
-opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 68px;
+    background-color: $white-color;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 10px  #ebebeb;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    opacity: 0;
 
     &__title {
         width: 100%;
@@ -186,16 +189,16 @@ opacity: 0;
 
     &:nth-child(1){
         animation: appearance 1s 2700ms forwards;
-      }
+    }
     &:nth-child(2){
         animation: appearance 1s 2900ms forwards;
-      }
+    }
     &:nth-child(3){
         animation: appearance 1s 3100ms forwards;
-      }
+    }
     &:nth-child(4){
         animation: appearance 1s 3300ms forwards;
-      }
+    }
 }
 
 .menu__starters, .menu__main-dishes, .menu__desserts {

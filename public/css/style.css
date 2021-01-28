@@ -412,8 +412,7 @@ footer .fa-hands-helping {
     padding: 0 10px 0 10px;
   }
 }
-
-.restau-prev__heading {
+.restau-list .restau-prev__heading {
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -422,13 +421,13 @@ footer .fa-hands-helping {
   padding: 20px 24px 20px 14px;
   box-shadow: 0 5px 5px #ebebeb;
 }
-.restau-prev__heading h3 {
+.restau-list .restau-prev__heading h3 {
   font-size: 1.8rem;
 }
-.restau-prev__heading p {
+.restau-list .restau-prev__heading p {
   font-weight: 100;
 }
-.restau-prev__heading .fa-heart {
+.restau-list .restau-prev__heading .fa-heart {
   font-size: 2.8rem;
   color: black;
   position: absolute;
@@ -438,7 +437,7 @@ footer .fa-hands-helping {
   cursor: pointer;
   z-index: 2;
 }
-.restau-prev__heading .fa-heart--hover {
+.restau-list .restau-prev__heading .fa-heart--hover {
   font-size: 2.6rem;
   color: transparent;
   position: absolute;
@@ -453,7 +452,7 @@ footer .fa-hands-helping {
   transition: opacity 750ms;
   z-index: 1;
 }
-.restau-prev__heading .fa-heart:hover + .fa-heart--hover {
+.restau-list .restau-prev__heading .fa-heart:hover + .fa-heart--hover {
   opacity: 1;
 }
 

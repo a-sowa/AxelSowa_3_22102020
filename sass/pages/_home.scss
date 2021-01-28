@@ -18,10 +18,11 @@
     text-align: center;
     padding: 43px 35px 57px 35px;
     
-        @media screen and (min-width: 582px) {
-            justify-content: space-evenly;
-            height: 400px;
-        }
+    @media screen and (min-width: 582px) {
+        justify-content: space-evenly;
+        height: 400px;
+    }
+
     h1 {
         font-size: 2.6rem;
         margin-bottom: 20px;
@@ -30,6 +31,7 @@
             margin-bottom: -20px;
         }
     }
+    
     p {
         font-size: 1.8rem;
         font-weight: 100;
@@ -40,16 +42,15 @@
 .process {
     padding: 50px 20px 68px 20px;
 
+    h2 {
+        padding-bottom: 32px;;
+    }
 
-        h2 {
-            padding-bottom: 32px;;
-        }
-
-        @media screen and (min-width: 400px) {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    @media screen and (min-width: 400px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .process__step {
@@ -72,15 +73,16 @@
         left: 12px;
         top: -10px;
     }
-        i {
-            margin: 0 26px 0 34px;
-            font-size: 2rem;
-            color: #7E7E7E;
-        }
 
-        p {
-            font-weight: 500;
-        }
+    i {
+        margin: 0 26px 0 34px;
+        font-size: 2rem;
+        color: #7E7E7E;
+    }
+
+    p {
+        font-weight: 500;
+    }
 
     .step-info {
         display: flex;
@@ -138,96 +140,98 @@
         flex-direction: column;
         margin-bottom: 23px;
         transition: transform 400ms;
+        
         &:hover {
             transform: scale(1.05);
         }
-    
-            img {
-                width: auto;
-                height: 175px;
-                object-fit: cover;
-                border-radius: 15px 15px 0 0;
-                object-position: center bottom;
 
-                @media screen and (min-width: 480px) {
-                    object-position: center center;
-                }   
+        img {
+            width: auto;
+            height: 175px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            object-position: center bottom;
+
+            @media screen and (min-width: 480px) {
+                object-position: center center;
+            }   
+        }
+
+        &--new-style {
+            background-color: $color-tertiary;
+            position: absolute;
+            top : 12px;
+            right: 12px;
+            padding: 8px 12px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            border-radius: 2px;
+            color: #008766;
+
+            @media screen and (min-width: 700px) {
+                right: 22px;
             }
+        }
+        
 
-            &--new-style {
-                background-color: $color-tertiary;
+        @media screen and (min-width: 700px) {
+            width: 335px;
+            padding: 0 10px 0 10px;
+        }
+
+        &__heading {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            background-color: $white-color;
+            border-radius: 0 0 15px 15px;
+            padding: 20px 24px 20px 14px;
+            box-shadow: 0 5px 5px  #ebebeb;
+            
+        
+            h3 {
+                font-size: 1.8rem;
+            }
+        
+            p {
+                font-weight: 100;
+            }
+        
+            .fa-heart {
+                font-size: 2.8rem;
+                color: black;
                 position: absolute;
-                top : 12px;
-                right: 12px;
-                padding: 8px 12px;
-                font-size: 1.4rem;
-                font-weight: 500;
-                border-radius: 2px;
-                color: #008766;
+                right: 24px;
+                opacity: 1;
+                transition: opacity 750ms;
+                cursor: pointer;
+                z-index: 2;
 
-                @media screen and (min-width: 700px) {
-                    right: 22px;
+                &--hover {
+                    font-size: 2.6rem;
+                    color: transparent;
+                    position: absolute;
+                    right: 25px;
+                    top: 21px;
+                    background-image: linear-gradient($color-secondary, $color-primary);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    cursor: pointer;
+                    font-weight: 900;
+                    opacity:  0;
+                    transition: opacity 750ms;
+                    z-index: 1;
                 }
             }
             
-
-            @media screen and (min-width: 700px) {
-                width: 335px;
-                padding: 0 10px 0 10px;
+            .fa-heart:hover + .fa-heart--hover {
+                opacity: 1;
             }
         }
+    }
 }
 
-.restau-prev__heading {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    background-color: $white-color;
-    border-radius: 0 0 15px 15px;
-    padding: 20px 24px 20px 14px;
-    box-shadow: 0 5px 5px  #ebebeb;
-    
 
-    h3 {
-        font-size: 1.8rem;
-    }
-
-    p {
-        font-weight: 100;
-    }
-
-    .fa-heart {
-        font-size: 2.8rem;
-        color: black;
-        position: absolute;
-        right: 24px;
-        opacity: 1;
-        transition: opacity 750ms;
-        cursor: pointer;
-        z-index: 2;
-            &--hover {
-                font-size: 2.6rem;
-                color: transparent;
-                position: absolute;
-                right: 25px;
-                top: 21px;
-                background-image: linear-gradient($color-secondary, $color-primary);
-                -webkit-background-clip: text;
-                background-clip: text;
-                cursor: pointer;
-                font-weight: 900;
-                opacity:  0;
-                transition: opacity 750ms;
-                z-index: 1;
-            }
-    }
-    
-
-    
-    .fa-heart:hover + .fa-heart--hover {
-        opacity: 1;
-      }
-}
 
 
 
