@@ -18,17 +18,17 @@
     text-align: center;
     padding: 43px 35px 57px 35px;
     
-    @media screen and (min-width: 582px) {
-        justify-content: space-evenly;
-        height: 400px;
-    }
+        @media screen and (min-width: 582px) {
+            justify-content: space-evenly;
+            height: 400px;
+        }
     h1 {
         font-size: 2.6rem;
         margin-bottom: 20px;
 
-    @media screen and (min-width: 582px) {
-        margin-bottom: -20px;
-    }
+        @media screen and (min-width: 582px) {
+            margin-bottom: -20px;
+        }
     }
     p {
         font-size: 1.8rem;
@@ -52,7 +52,7 @@
         }
 }
 
-.process-step {
+.process__step {
     display: flex;
     align-items: center;
     position: relative;
@@ -97,11 +97,11 @@
             text-align: center;
         }
 
-            &__3 {
-                background-color: #F5EDFF;
+        &--active {
+            background-color: #F5EDFF;
 
-                i {
-                    color: $color-primary;
+            i {
+                color: $color-primary;
             }
         }
     }
@@ -154,7 +154,7 @@
                 }   
             }
 
-            &__new-style {
+            &--new-style {
                 background-color: $color-tertiary;
                 position: absolute;
                 top : 12px;
@@ -170,12 +170,6 @@
                 }
             }
             
-            #restau-img-lanote {
-                object-position:  0 -150px;
-                @media screen and (max-width: 315px) {
-                    object-position: center bottom;
-                }
-            }
 
             @media screen and (min-width: 700px) {
                 width: 335px;
@@ -211,25 +205,26 @@
         transition: opacity 750ms;
         cursor: pointer;
         z-index: 2;
+            &--hover {
+                font-size: 2.6rem;
+                color: transparent;
+                position: absolute;
+                right: 25px;
+                top: 21px;
+                background-image: linear-gradient($color-secondary, $color-primary);
+                -webkit-background-clip: text;
+                background-clip: text;
+                cursor: pointer;
+                font-weight: 900;
+                opacity:  0;
+                transition: opacity 750ms;
+                z-index: 1;
+            }
     }
     
-    .heart-hover {
-        font-size: 2.6rem;
-        color: transparent;
-        position: absolute;
-        right: 25px;
-        top: 21px;
-        background-image: linear-gradient($color-secondary, $color-primary);
-        -webkit-background-clip: text;
-        background-clip: text;
-        cursor: pointer;
-        font-weight: 900;
-        opacity:  0;
-        transition: opacity 750ms;
-        z-index: 1;
-    }
+
     
-    .fa-heart:hover + .heart-hover{
+    .fa-heart:hover + .fa-heart--hover {
         opacity: 1;
       }
 }
